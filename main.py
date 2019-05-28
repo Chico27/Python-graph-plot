@@ -1,12 +1,7 @@
 import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
-
-sns.set()
-sns.set_style('whitegrid')
-sns.set_palette('gray')
 
 myFile = open("data.txt")
 
