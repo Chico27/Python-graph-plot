@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 myFile = open("data.txt")
 
@@ -9,6 +9,9 @@ while line:
     line = myFile.readline()
     data = line.strip().split(",")
     print(data)
+    # x = data[0]
+    # y = data[1]
+    # print(x)
 
 myFile.close()
 
