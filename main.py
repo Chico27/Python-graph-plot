@@ -13,6 +13,7 @@ myFile = open("data.txt")
 line = myFile.readline()
 x = []
 y = []
+point = []
 
 while line:
     data = line.strip().split(",")
@@ -21,6 +22,8 @@ while line:
     print(data[1])
     x.append(int(data[0]))
     y.append(int(data[1]))
+    point.append(data[2])
+
     line = myFile.readline()
 
 
@@ -29,11 +32,8 @@ print(x)
 print(y)
 outputx = np.array(x)
 outputy = np.array(y)
+plt.xlabel("date")
+plt.ylabel("articles")
 
-fig = plt.figure()
-ax = fig.add_subplot(1, 1, 1)
-ax.plot(outputx, outputy)
-ax.set_xlabel('cold treatment [hour]')
-ax.set_ylabel('gene activity')
-ax.set_ylim(0, 2)
+plt.plot(outputx, outputy)
 plt.show()
